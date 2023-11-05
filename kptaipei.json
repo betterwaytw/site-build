@@ -1,0 +1,132 @@
+{
+    "title": "柯文哲",
+    "description": "2014~2022 市長政績",
+    "package": [
+        {
+            "id": 1000,
+            "title": "國內外肯定",
+            "alias": "肯定",
+            "intro": "國內外肯定.html"
+        },
+        {
+            "id": 2000,
+            "title": "西區門戶計畫",
+            "alias": "西區",
+            "intro": "西區門戶計畫.html"
+        },
+        {
+            "id": 3000,
+            "title": "東區門戶計畫",
+            "alias": "東區",
+            "intro": "東區門戶計畫.html"
+        },
+        {
+            "id": 4000,
+            "title": "北投士林科技園區",
+            "alias": "士北",
+            "intro": "北投士林科技園區.html"
+        },
+        {
+            "id": 8000,
+            "title": "友善居住",
+            "alias": "居住",
+            "intro": "友善居住.html"
+        },
+        {
+            "id": 7000,
+            "title": "交通運輸與安全",
+            "alias": "交通",
+            "intro": "交通運輸與安全.html"
+        },
+        {
+            "id": 6000,
+            "title": "永續環境",
+            "alias": "環境",
+            "intro": "永續環境.html"
+        },
+        {
+            "id": 11000,
+            "title": "市場改建",
+            "alias": "市場",
+            "intro": "市場改建.html"
+        },
+        {
+            "id": 9000,
+            "title": "社會安全與效率警消",
+            "alias": "警消",
+            "intro": "社會安全與效率警消.html"
+        },
+        {
+            "id": 15000,
+            "title": "友善婚育",
+            "alias": "婚育",
+            "intro": "友善婚育.html"
+        },
+        {
+            "id": 14000,
+            "title": "高齡化服務",
+            "alias": "高齡",
+            "intro": "高齡化服務.html"
+        },
+        {
+            "id": 16000,
+            "title": "智慧校園與創新教育",
+            "alias": "校園",
+            "intro": "智慧校園與創新教育.html"
+        },
+        {
+            "id": 18000,
+            "title": "共融式遊戲場",
+            "alias": "遊戲場",
+            "intro": "共融式遊戲場.html"
+        },
+        {
+            "id": 17000,
+            "title": "多元文化共融",
+            "alias": "文化",
+            "intro": "多元文化共融.html"
+        },
+        {
+            "id": 19000,
+            "title": "動物友善",
+            "alias": "動物",
+            "intro": "動物友善.html"
+        },
+        {
+            "id": 13000,
+            "title": "穩健防疫",
+            "alias": "防疫",
+            "intro": "穩健防疫.html"
+        },
+        {
+            "id": 12000,
+            "title": "智慧城市",
+            "alias": "智慧",
+            "intro": "智慧城市.html"
+        },
+        {
+            "id": 10000,
+            "title": "新創與招商",
+            "alias": "招商",
+            "intro": "新創與招商.html"
+        },
+        {
+            "id": 5000,
+            "title": "都市發展 TOD & EOD",
+            "alias": "都發",
+            "intro": "都市發展.html"
+        },
+        {
+            "id": 4500,
+            "title": "明日社子島",
+            "alias": "社子島",
+            "intro": "明日社子島.html"
+        },
+        {
+            "id": 20000,
+            "title": "政治文化創新",
+            "alias": "政治",
+            "intro": "政治文化創新.html"
+        }
+    ]
+}

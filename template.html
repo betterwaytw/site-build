@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>{{ title }} {{ description }}</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script type="text/javascript" src="./script.js" ></script>
+</head>
+<body>
+<div id="loading">KP 向前行 &nbsp;<span class="spinner"></span></div>
+<div class="sidebar">
+  <h1 id="sitetitle">
+    {{ title }}
+    <span class="subtitle">{{ description }}</span>
+  </h1>
+  <ul>
+    {% for item in package %}
+    <li id="main{{ item.alias }}" class="main" title="{{ item.alias }}">
+      <div id="chk{{ item.alias }}" class="chk" title="{{ item.alias }}">{{ item.title }}</div>
+      <div id="phonedetail{{ item.alias }}" class="phonedetail">
+        {% if "intro" in item %}
+        <div class="intro-content">{% include item.intro %}</div>
+        {% endif %}
+        {% if "video" in item %}
+        <div class="video-content">
+          {% for v in item.video %}
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ v }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if "work" in item %}
+        <div class="faq-content">
+          {% for w in item.work %}
+          {% set workcounter = item.id + w.id %}
+          <div class="faq-question">
+            <input id="q{{ workcounter }}" type="checkbox" class="panel">
+            <div class="plus">&gt;</div>
+            <label for="q{{ workcounter }}" class="panel-title">{{ w.title }}</label>
+            <div class="panel-content">{{ w.intro }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if "link" in item %}
+        <div class="link-content">
+          <div class="link-title">&raquo; 相關連結</div>
+          {% for k in item.link %}
+          <div class="link-url"><a href="{{ k }}">{{ k }}</a></div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="sidebarbg">&nbsp;</div>
+
+<div class="content">
+
+  <div id="detailmain" class="detail">
+    <div class="detailcontent">
+      <div class="intro-content">
+        {% include "main.html" %}
+      </div>
+    </div>
+  </div>
+
+  {% for item in package %}
+  <div id="detail{{ item.alias }}" class="detail">
+    <h2>
+      {{ item.title }}
+    </h2>
+    <div class="detailcontent" title="{{ item.alias }}">
+      {% if "intro" in item %}
+      <div class="intro-content">{% include item.intro %}</div>
+      {% endif %}
+      {% if "video" in item %}
+      <div class="video-content">
+        {% for v in item.video %}
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ v }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if "work" in item %}
+      <div class="faq-content">
+        {% for w in item.work %}
+        {% set workcounter = item.id + w.id %}
+        <div class="faq-question">
+          <input id="q{{ workcounter }}" type="checkbox" class="panel">
+          <div class="plus">&gt;</div>
+          <label for="q{{ workcounter }}" class="panel-title">{{ w.title }}</label>
+          <div class="panel-content">{{ w.intro }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if "link" in item %}
+      <div class="link-content">
+        <div class="link-title">&raquo; 相關連結</div>
+        {% for k in item.link %}
+        <div class="link-url"><a href="{{ k }}">{{ k }}</a></div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</body>
+</html>
