@@ -27,6 +27,9 @@
     {{ title }}
     <span class="subtitle">{{ description }}</span>
   </h1>
+  <div id="phonemain">
+    {% include "main.html" %}
+  </div>
   <ul>
     {% for item in package %}
     <li id="main{{ item.alias }}" class="main" title="{{ item.alias }}">
